@@ -1,0 +1,262 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  border: 1px solid rgb(198, 202, 206);
+  background-color: rgb(198, 202, 206);
+}
+
+.footer {
+  align-items: center;
+  background-color: rgb(198, 202, 206);
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+}
+
+.footerMsg {
+  font-size: 1.5em;
+  font-family: -apple-system, BlinkMacSystemFont, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  color: rgb(40, 60, 71);
+}
+
+.errorPg {
+  width: 100vw;
+  height: auto;
+  text-align: center;
+}
+
+.error {
+  color: tomato;
+  font-size: xx-large;
+  font-weight: bolder;
+  font-family: cursive;
+}
+
+.error1 {
+  color: tomato !important;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: cursive;
+}
+
+.title {
+  text-align: center;
+  color: rgb(40, 60, 71);
+  font-size: 2.5em;
+}
+
+.abt {
+  font-weight: 600;
+  font-size: 1.5em;
+  font-family: fantasy;
+  text-align: center;
+}
+
+.imgs {
+  width: 100vw;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.meImg {
+  width: 200px;
+  height: 200px;
+  border: 3px solid rgb(68, 67, 67);
+  border-radius: 50%;
+}
+
+.linkitems {
+  display: flex;
+  justify-content: center;
+  margin-left: -50px;
+}
+
+.links {
+  list-style: none;
+  display: inline-block;
+  padding: 0.7rem;
+  margin: 0 1.2rem;
+  border-radius: 10px;
+  width: 3em;
+  text-align: center;
+}
+.links:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #019fb6;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+.links:hover:after {
+  transform: scaleX(1);
+  opacity: 0.8;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(22, 22, 22);
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1em 0;
+  width: 100vw;
+  height: auto;
+}
+
+.inputField {
+  width: 400px;
+  height: 3em;
+  display: flex;
+  border-radius: 30px;
+  background-color: rgb(238, 235, 235);
+  align-items: center;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 0.8em;
+}
+
+#input {
+  width: 100%;
+  font-weight: 500;
+  font-family: serif;
+  font-size: 1em;
+}
+
+#input:empty::before {
+  content: attr(data-placeholder);
+  opacity: 0.6;
+  font-weight: 500;
+}
+
+#input:focus {
+  outline: none;
+  border: none;
+}
+
+.btn {
+  display: block;
+  padding: 0.5em 2.5em;
+  background-color: #019fb6;
+  border: none;
+  border-radius: 10px;
+  margin-top: 1.5em;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  background-color: #01a1b6;
+}
+
+.btn:focus {
+  outline: none;
+  border: none;
+}
+
+.data {
+  width: 400px;
+  height: auto;
+  margin-top: 0.5em;
+  padding: 0.5em;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgb(206, 206, 206);
+}
+
+#msg-1 {
+  font-size: 1.5em;
+  font-weight: bolder;
+  font-family: serif;
+  color: rgb(30, 43, 63);
+}
+
+#msg-2 {
+  font-size: 1.3em;
+  font-family: serif;
+  color: rgb(38, 54, 54);
+}
+
+.area {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+}
+
+.loading {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #f3f3f3;
+  border-top: 3px solid #f25a41;
+  border-radius: 100%;
+  position: relative;
+  animation: spin 1s infinite linear;
+}
+
+.row {
+  display: flex;
+  width: 100vw;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .inputField {
+    width: 300px;
+  }
+  .data {
+    width: 300px;
+    margin-top: 0em;
+    padding: 0.5em;
+  }
+  .footer {
+    bottom: 0;
+  }
+}
