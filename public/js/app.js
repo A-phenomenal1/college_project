@@ -1,5 +1,3 @@
-console.log("client side app.js loaded");
-
 const weatherForm = document.querySelector("form");
 const msgs1 = document.querySelector("#msg-1");
 const msgs2 = document.querySelector("#msg-2");
@@ -17,7 +15,7 @@ weatherForm.addEventListener("submit", (e) => {
                 </div>`;
   msgs1.innerHTML = headline;
   msgs2.innerHTML = loader;
-  fetch("http://localhost:3000/weather?address=" + search).then((response) => {
+  fetch("/weather?address=" + search).then((response) => {
     response.json().then((data) => {
       if (data.error) {
         msgs1.textContent = "Error";
