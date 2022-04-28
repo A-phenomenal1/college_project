@@ -20,14 +20,14 @@ app.use(express.static(publicDir));
 app.get("", (req, res) => {
   res.render("index", {
     title: "Weather App",
-    name: "A-phenomenal1",
+    name: "Web Developer",
   });
 });
 
 app.get("/about", (req, res) => {
   res.render("about", {
     title: "About",
-    name: "A-phenomenal1",
+    name: "Web Developer",
   });
 });
 
@@ -35,7 +35,7 @@ app.get("/help", (req, res) => {
   res.render("help", {
     title: "Help",
     message: "Hello, wanna some help......",
-    name: "Nitesh Kumar",
+    name: "Web Developers",
   });
 });
 
@@ -68,7 +68,7 @@ app.get("/help/*", (req, res) => {
   res.render("helpArticle", {
     title: "Articles",
     errorMsg: "Help Article Not Found!!!",
-    name: "Nitesh Kumar",
+    name: "Web Developer",
   });
 });
 
@@ -76,7 +76,7 @@ app.get("*", (req, res) => {
   res.render("page404", {
     title: "Error",
     errorMsg: "404 Page",
-    name: "A-phenomenal1",
+    name: "Web Developers",
   });
 });
 
